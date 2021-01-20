@@ -47,7 +47,7 @@ public class CardOrderTest {
         $("[data-test-id=name] input").setValue("Семен Семенович");
         $("[data-test-id=phone] input").setValue("+88005553535");
         $(By.className("button")).click();
-        $(".input_invalid[data-test-id=agreement]").$(".checkbox__text").shouldHave(Condition.cssValue("color", "rgba(255, 92, 92, 1)"));
+        $(".input_invalid[data-test-id=agreement] .checkbox__text").shouldHave(Condition.exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
     }
 
     @Test
